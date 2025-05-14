@@ -1,0 +1,71 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.20",
+  "id": "783f9b41-bb1e-44e9-9152-5118ab9790e9",
+  "name": { "short": "AgentBotRelay", "full": "Agent Bot Relay" },
+  "developer": {
+    "name": "Contoso Corp",
+    "mpnId": "",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/termsofuse"
+  },
+  "description": { "short": "Agent Bot Relay", "full": "Agent Bot Relay" },
+  "icons": { "outline": "outline.png", "color": "color.png" },
+  "accentColor": "#FFFFFF",
+  "staticTabs": [
+    { "entityId": "conversations", "scopes": ["personal"] },
+    { "entityId": "about", "scopes": ["personal"] }
+  ],
+  "bots": [
+    {
+      "botId": "5e8873e7-9544-40a1-8084-691a79fd29b6",
+      "scopes": ["personal", "team", "groupChat"],
+      "isNotificationOnly": false,
+      "supportsCalling": false,
+      "supportsVideo": false,
+      "supportsFiles": false,
+      "commandLists": [
+        {
+          "scopes": ["personal"],
+          "commands": [
+            {
+              "title": "Password Reset",
+              "description": "Guide me through resetting my password"
+            },
+            {
+              "title": "Software Installation",
+              "description": "Help me install new software"
+            },
+            {
+              "title": "Network Issues",
+              "description": "Troubleshoot network connectivity problems"
+            },
+            {
+              "title": "Hardware Support",
+              "description": "Assist with hardware-related issues"
+            },
+            {
+              "title": "IT Policies",
+              "description": "Provide information on IT policies and best practices"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "copilotAgents": {
+    "customEngineAgents": [
+      {
+        "id": "5e8873e7-9544-40a1-8084-691a79fd29b6",
+        "type": "bot"
+      }
+    ]
+  },
+  "validDomains": [],
+  "webApplicationInfo": {
+    "id": "5e8873e7-9544-40a1-8084-691a79fd29b6",
+    "resource": ""
+  }
+}
